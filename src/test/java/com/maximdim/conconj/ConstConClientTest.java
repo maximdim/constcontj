@@ -26,7 +26,7 @@ public class ConstConClientTest {
   @BeforeClass
   public static void init() throws Exception {
     Properties p = new Properties();
-    p.load(new FileReader(new File(System.getProperty("user.home"), "constconj.properties")));
+    p.load(new FileReader(new File(System.getProperty("user.home"), "constcontj.properties")));
     
     client = new ConstConClient(p.getProperty("API_KEY"), p.getProperty("USERNAME"), p.getProperty("PASSWORD"));
 
