@@ -22,6 +22,15 @@ public class Contact {
   @XmlElement(name="OptInSource")
   public OptInSource optInSource = OptInSource.ACTION_BY_CUSTOMER;
   
+  @XmlElement(name="FirstName")
+  public String firstName;
+  
+  @XmlElement(name="LastName")
+  public String lastName;
+  
+  @XmlElement(name="CustomField1")
+  public String customField1;
+  
   @XmlElement(name="ContactLists")
   public ContactLists contactLists = new ContactLists();
 

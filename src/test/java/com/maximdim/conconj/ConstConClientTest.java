@@ -37,6 +37,9 @@ public class ConstConClientTest {
     // create new contact with random email
     contactEmail = "test"+System.currentTimeMillis()+"@test.com";
     Contact contact = new Contact(contactEmail);
+    contact.firstName = "John";
+    contact.lastName = "Doe";
+    contact.customField1 = "1234567890";
     contact.addList(contactListId);
     
     contactId = client.createContact(contact);
@@ -72,6 +75,9 @@ public class ConstConClientTest {
     
     Contact contact = contacts.get(0);
     assertEquals(contactId, contact.getShortId());
+    assertEquals("John", contact.firstName);
+    assertEquals("Doe", contact.lastName);
+    assertEquals("1234567890", contact.customField1);
   }
 
   @Test
